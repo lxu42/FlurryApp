@@ -10,11 +10,15 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.flurry.android.FlurryAgent;
+
 public class FlurryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FlurryAgent.setLogEnabled(false);
+        FlurryAgent.init(this, BuildConfig.FLURRY_API_KEY);
         setContentView(R.layout.activity_flurry);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
