@@ -7,9 +7,27 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <ImageView
+        android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:src="@drawable/tinydog" />
+
+    <Button
+        android:id="@+id/crash_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Force Crash!"
+        android:onClick="forceCrash"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buy_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/image"
+        android:text="Buy!"
+        android:onClick="purchase"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
